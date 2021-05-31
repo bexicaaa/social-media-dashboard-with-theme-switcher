@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | [Social Media Dashboard Theme Switcher]</title>
+
+</head>
+
+<body class="body-dark-theme">
+  <!--MAIN CONTAINER-->
+  <main class="main">
+
+    <!--HEADER-->
+    <header class="header">
+      <div class="header__info">
+        <h1 class="header__heading">Social Media Dashboard</h1>
+        <p class="header__subheading">Total Followers: 23,004</p>
+      </div>
+      <div class="header__toggle">
+        <p class="header__subheading">Dark Mode</p>
+        <input type="checkbox" id="light-mode-toggle" /><label for="light-mode-toggle"></label>
+        <!--<button class="header__switch" id="toggle-switch" aria-label="dark mode toggle switch"></button>-->
+      </div>
+    </header>
+
+    <!--OVERALL-->
+    <div class="overall">
+      <article class="overall__card overall__card--fb">
+        <div class="overall__card-social">
+          <img src="./images/icon-facebook.svg" alt="facebook icon">
+          <h2 class="overall__heading">@nathanf</h2>
+        </div>
+        <p class="overall__follower-count">1987</p>
+        <p class="overall__text">Followers</p>
+        <p class="overall__grow">12 Today</p>
+      </article>
+      <article class="overall__card overall__card--tt">
+        <div class="overall__card-social">
+          <img src="./images/icon-twitter.svg" alt="twitter icon">
+          <h2 class="overall__heading">@nathanf</h2>
+        </div>
+        <p class="overall__follower-count">1044</p>
+        <p class="overall__text">Followers</p>
+        <p class="overall__grow">99 Today</p>
+      </article>
+      <article class="overall__card overall__card--inst">
+        <div class="overall__card-social">
+          <img src="./images/icon-instagram.svg" alt="instagram icon">
+          <h2 class="overall__heading">@realnathanf</h2>
+        </div>
+        <p class="overall__follower-count">11</p>
+        <p class="overall__text">Followers</p>
+        <p class="overall__grow">1099 Today</p>
+      </article>
+      <article class="overall__card overall__card--yt ">
+        <div class="overall__card-social">
+          <img src="./images/icon-youtube.svg" alt="youtube icon">
+          <h2 class="overall__heading">Nathan F.</h2>
+        </div>
+        <p class="overall__follower-count">8239</p>
+        <p class="overall__text">Subscribers</p>
+        <p class="overall__grow overall__grow--down">144 Today</p>
+      </article>
+    </div>
+    <!--OVERVIEW-->
+    <section class="overview">
+      <h2 class="overview__heading">Overview - Today</h2>
+      <div class="overview__wrapper">
+        <!-- FACEBOOK -->
+        <article class="overview__stats ">
+          <h3 class="overview__stats-type">Page Views</h3>
+          <img src="./images/icon-facebook.svg" alt="facebook icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">87</p>
+          <p class="overview__stats-grow">3%</p>
+        </article>
+        <article class="overview__stats ">
+          <h3 class="overview__stats-type">Likes</h3>
+          <img src="./images/icon-facebook.svg" alt="facebook icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">52</p>
+          <p class="overview__stats-grow overview__stats-grow--down">2%</p>
+        </article>
+        <!-- INSTAGRAM-->
+        <article class="overview__stats ">
+          <h3 class="overview__stats-type">Likes</h3>
+          <img src="./images/icon-instagram.svg" alt="instagram icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">5462</p>
+          <p class="overview__stats-grow">2257%</p>
+        </article>
+        <article class="overview__stats ">
+          <h3 class="overview__stats-type">Profile Views</h3>
+          <img src="./images/icon-instagram.svg" alt="instagram icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">52</p>
+          <p class="overview__stats-grow">1375%</p>
+        </article>
+        <!-- TWITTER -->
+        <article class="overview__stats">
+          <h3 class="overview__stats-type">Retweets</h3>
+          <img src="./images/icon-twitter.svg" alt="twitter icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">117</p>
+          <p class="overview__stats-grow">303%</p>
+        </article>
+        <article class="overview__stats">
+          <h3 class="overview__stats-type">Likes</h3>
+          <img src="./images/icon-twitter.svg" alt="twitter icon" class="overview__stats-socials">
+          <p class="overview__stats-counter" data-counter="507"><span>0</span></p>
+          <p class="overview__stats-grow">553%</p>
+        </article>
+        <!-- YOUTUBE -->
+        <article class="overview__stats">
+          <h3 class="overview__stats-type">Likes</h3>
+          <img src="./images/icon-youtube.svg" alt="youtube icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">107</p>
+          <p class="overview__stats-grow overview__stats-grow--down">19%</p>
+        </article>
+        <article class="overview__stats">
+          <h3 class="overview__stats-type">Total Views</h3>
+          <img src="./images/icon-youtube.svg" alt="youtube icon" class="overview__stats-socials">
+          <p class="overview__stats-counter">1407</p>
+          <p class="overview__stats-grow overview__stats-grow--down">12%</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

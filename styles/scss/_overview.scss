@@ -1,0 +1,84 @@
+.overview {
+  
+  &__heading {
+    color: var(--color-text-1);
+    margin-bottom: 20px;
+  }
+
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 30px;
+  }
+
+   &__stats {
+    background: var(--color-card-bg);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, min-content);
+    grid-gap: 20px;
+    justify-content: space-between;
+    padding: 25px 30px 20px 25px;
+    border-radius: 10px;
+  
+      &:hover {
+      background: var(--color-hover);
+      }
+   }
+
+    &__stats-type {
+      font-size: 0.875rem;
+      color: var(--color-text-2);
+    }
+
+    &__stats-counter {
+      font-size: 2rem;
+      font-weight: map-get($font-weights, bold);
+      color: var(--color-text-1);
+    }
+
+    &__stats-socials {
+      justify-self: end;
+    }
+
+    &__stats-grow {
+      align-self: end;
+      font-size: 0.875rem;
+      color: var(--color-lime-green);
+      margin-bottom: 5px;
+      font-weight: map-get($font-weights, bold);
+
+      &::before {
+        position: relative;
+        content: url(../../images/icon-up.svg);
+        top: -2px;
+        right: 2px;
+      }
+
+      &--down {
+        color: var(--color-youtube-red);
+
+        &::before {
+            content: url(../../images/icon-down.svg);
+        }
+      }
+    }
+}
+/*Overview media queries*/
+@include media-s {
+  .overview {
+    &__stats {
+        &:last-child {
+            grid-template-columns: 3;
+        }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+.overall {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+
+  &__card {
+    background: var(--color-card-bg);
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0 26px 0;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      background:var(--color-hover);
+    }
+  
+
+    &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    }
+
+    &--fb::before {
+    background: var(--color-facebook-blue);
+    } 
+
+   &--tt::before {
+    background: var(--color-twitter-blue);
+   }
+
+   &--inst::before {
+    background: linear-gradient(to right, var(--color-instagram-pink), var(--color-instagram-orange));
+   }
+
+   &--yt::before {
+    background: var(--color-youtube-red);
+   }
+  }
+
+  &__card-social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    img {
+      width: 20px;
+      height: auto;
+      margin-right: 8px;
+    }
+  }
+
+  &__heading {
+    font-weight: map-get($font-weights, bold);
+    font-size: 	0.75rem;
+    color: var(--color-text-2);
+  }
+
+  &__follower-count {
+    font-size: 4rem;
+    font-weight: map-get($font-weights, bold);
+    color: var(--color-text-1);
+  }
+
+  &__text {
+    color: var(--color-text-2);
+    text-transform: uppercase;
+    font-weight: map-get($font-weights, regular);
+    letter-spacing: 5px;
+    margin-bottom: 24px;
+  }
+
+  &__grow {
+    position: relative;
+    color: var(--color-lime-green);
+    font-weight: map-get($font-weights, bold);
+
+    &::before {
+      position: relative;
+      content: url(../../images/icon-up.svg);
+      top: -2px;
+      right: 4px;
+    }
+
+    &--down {
+      color: var(--color-bright-red);
+
+      &::before {
+        content: url(../../images/icon-down.svg);
+      }
+    }
+  }
+}
+
+/* Overall media queries */
+@include media-s{
+  .overall {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include media-m {
+  .overall {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
