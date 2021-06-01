@@ -10,23 +10,20 @@ const lightModeToggle = document.querySelector("#light-mode-toggle");
 //if it is disabled turn it on
 
 
-//reusable as many times as we want
 const enableLightMode = () => {
   //1. add the class darkmode to the body
   document.body.classList.add('body-light-theme');
   //2. update lightMode in the Local Storage, so that we know that setting is for next time somebody comes
   localStorage.setItem('lightMode', 'enabled'); //key-lightMode, value-enabled
-  //3.
+
 
 }
 
 //opposite of the previous function 
 const disableLightMode = () => {
-  //1. add the class darkmode to the body
-  document.body.classList.remove('body-light-theme');
-  //2. update lightMode in the Local Storage, so that we know that setting is for next time somebody comes
-  localStorage.setItem('lightMode', null); //key-lightMode, value-enabled
-  //3.
+  document.body.classList.remove('body-light-theme'); 
+  localStorage.setItem('lightMode', null); 
+
 
 }
 
